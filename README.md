@@ -1,2 +1,1 @@
-# Getting-and-Cleaning-Data-R-Course-Project
-Coursera.org, Peer-graded assignment
+# Getting-and-Cleaning-Data-R-Course-Project Coursera.org, Peer-graded assignment
