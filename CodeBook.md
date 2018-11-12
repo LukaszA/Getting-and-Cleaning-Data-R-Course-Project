@@ -1,10 +1,4 @@
----
-title: "CodeBook for Peer-graded assignment from Getting-and-Cleaning-Data-R-Course-Project"
-output: html_document
----
-
-
-## Desctiption of data transformation
+## Desctiption of data transformation in run_analysis.R
 
 #create data directory if it doesn't exist
 #file download and unzip
