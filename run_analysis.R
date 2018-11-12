@@ -69,9 +69,9 @@ rm(activityLables, features, subjectTest, subjectTrain, xTest, xTrain, yTest, yT
 #create independent tidyDataSet with the average of each variable for each activity and each subject
 tidyDataSet <-  finalDataset %>%
   gather(key   = featureName,
-         value = value,
+        value = value,
          -subject_id, -activityName) %>% 
-  group_by(activityName, subject_id) %>%
+  group_by(activityName, subject_id, featureName) %>%
   summarize(mean = mean(value))
 
 
