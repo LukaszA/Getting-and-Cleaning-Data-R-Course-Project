@@ -1,20 +1,20 @@
 ## Description of data transformation in run_analysis.R
 
-# create data directory if it doesn't exist
+### create data directory, if it doesn't exist
 
-# file download and unzip
+### file download and unzip
 
-# read row data from files
+### read row data from files
 
-# set appropriate column names to datasets
+### set appropriate column names to datasets
 
-# choose only columns that contains Mean or Standard Deviation from features$featureName
+### choose only columns that contains Mean or Standard Deviation from features$featureName
 
-# dataset merges
+### dataset merges
 
-# remove all unnecessary objects
+### remove all unnecessary objects
 
-# create independent tidyDataSet with the average of each variable for each activity and each subject
+### create independent tidyDataSet with the average of each variable for each activity and each subject
 
 ```
 tidyDataSet <-  finalDataset %>%
@@ -25,7 +25,7 @@ tidyDataSet <-  finalDataset %>%
   summarize(mean = mean(value))
 ```
 
-# save tidyData as a txt file created with write.table() using row.name=FALSE
+### save tidyData as a txt file created with write.table() using row.name=FALSE
 
 
 
