@@ -18,10 +18,23 @@ Zipped data source is: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfi
 
 Script reads every file into **dplyr** tables
 
+```
+xTrain <- tbl_df(read.table(paste(dataDir,"/train/X_train.txt",sep="")))
+yTrain <- tbl_df(read.table(paste(dataDir,"/train/Y_train.txt",sep="")))
+subjectTrain <- tbl_df(read.table(paste(dataDir,"/train/subject_train.txt",sep="")))
+
+xTest <- tbl_df(read.table(paste(dataDir,"/test/X_test.txt",sep="")))
+yTest <- tbl_df(read.table(paste(dataDir,"/test/Y_test.txt",sep="")))
+subjectTest <- tbl_df(read.table(paste(dataDir,"/test/subject_test.txt",sep="")))
+
+activityLables <- tbl_df(read.table(paste(dataDir,"/activity_labels.txt",sep="")))
+features <- tbl_df(read.table(paste(dataDir,"/features.txt",sep="")))
+```
+
 
 ### Set appropriate column names to datasets
 
-Assign descriptive columns names for better data undesrstanding. The main tables xTrain and xTest get column names from futures dataset
+Assign descriptive columns names for better data understanding. The main tables xTrain and xTest get column names from futures dataset
 
 ```
 colnames(xTrain) <- features$featureName
@@ -70,3 +83,8 @@ tidyDataSet <-  finalDataset %>%
 
 
 ### Save tidyData as a txt file created with write.table() using row.name=FALSE
+
+```
+write.table(tidyDataSet, file = "tidyDataSet.txt", row.name = FALSE)
+```
+
