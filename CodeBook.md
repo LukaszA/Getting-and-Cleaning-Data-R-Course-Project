@@ -34,7 +34,7 @@ features <- tbl_df(read.table(paste(dataDir,"/features.txt",sep="")))
 
 ### Set appropriate column names to datasets
 
-Assign descriptive columns names for better data undesrstanding. The main tables xTrain and xTest get column names from futures dataset
+Assign descriptive columns names for better data understanding. The main tables xTrain and xTest get column names from futures dataset
 
 ```
 colnames(xTrain) <- features$featureName
@@ -83,3 +83,8 @@ tidyDataSet <-  finalDataset %>%
 
 
 ### Save tidyData as a txt file created with write.table() using row.name=FALSE
+
+```
+write.table(tidyDataSet, file = "tidyDataSet.txt", row.name = FALSE)
+```
+
